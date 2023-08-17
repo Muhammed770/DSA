@@ -25,9 +25,7 @@ public class printNto1 {
             newArray[arr.length] = x;
             int[] result = compute(x-1, newArray);
             return result;
-            // int[] result= printNos(x-1);
-            // newArray[result.length] = x;
-            // return newArray;
+            
         }
     }
 }
