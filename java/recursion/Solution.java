@@ -12,7 +12,7 @@ public class Solution {
 
     public static List<Long> factorialNumbers(Long n) {
         List<Long> result = new ArrayList<>();
-        for (Long i = 1L; i < n; ++i) {
+        for (Long i = 1L; i <= n; ++i) {
             Long factorial = fact(i);
             if (factorial <= n) {
                 result.add(factorial);
