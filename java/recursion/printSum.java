@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Arrays;
 
-public class printNto1 {
+public class printSum {
     public static void main(String[] args) { 
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
