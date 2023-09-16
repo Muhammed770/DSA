@@ -12,6 +12,7 @@ class NonConstructibleChange {
         minChange+=coin;
       }
     }
+    //
     return minChange+1;
   }
 }
