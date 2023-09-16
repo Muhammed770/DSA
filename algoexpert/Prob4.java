@@ -28,7 +28,6 @@ class Prob4 {
         winner = entry.getKey();
       }
     }
-    //get max values key from hmap
     return winner;
   }
 }
