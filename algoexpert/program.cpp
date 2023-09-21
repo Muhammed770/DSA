@@ -40,5 +40,6 @@ int evaluateExpressionTree(BinaryTree *node)
         return l * r;
     default:
         return 0;
+    //default: return 0;
     }
 }
