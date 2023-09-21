@@ -6,7 +6,10 @@
 
 int main() {
     std::array<int,5> arr = {5,3,2,1,3};
-    std::string input = "1 2 3 4 5 6 7";
+    // std::string input = "1 2 3 4 5 6 7";
+    std::string input;
+    std::getline(std::cin,input);
+    std::cout<<"your input :"<<input;
     std::istringstream iss(input);
     int number;
     std::vector<int> numbers;
