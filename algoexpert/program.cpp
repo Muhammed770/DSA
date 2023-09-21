@@ -13,6 +13,10 @@ public:
 
 int evaluateExpressionTree(BinaryTree *node)
 {
+    if(node == nullptr ) {
+        //handle here
+        return 0;
+    }
     if (node->left == nullptr && node->right == nullptr)
     {
         return node->value;
