@@ -31,6 +31,7 @@ int evaluateExpressionTree(BinaryTree *node)
         return l - r;
     case -3:
         if (r != 0)
+            //or could 
             return round(l / r);
         else
             return 0;
