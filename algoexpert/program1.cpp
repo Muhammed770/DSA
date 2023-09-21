@@ -6,11 +6,8 @@
 using namespace std;
 int main() {
     cout<<"helloo"<<"\n" ;
-    vector<int> myVector;
-    myVector.push_back(5);
-    myVector.push_back(4);
-    myVector.push_back(6);
-    myVector.push_back(8);
+    std::vector<int> myVector = {1,4,5,6,3,2,345,667,78};
+    
     cout<<"vector: \n";
 
     vector<int>::iterator it = myVector.begin();
