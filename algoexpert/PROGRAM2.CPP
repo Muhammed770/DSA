@@ -19,6 +19,6 @@ int main() {
         sum +=n;
     }
     std::cout<<"sum: "<<sum;
-    
+    //
     return 0;
 }
