@@ -2,12 +2,16 @@
 #include<iostream>
 #include<vector>
 #include<cmath>
+#include<array>
 
 using namespace std;
 int main() {
-    cout<<"helloo"<<"\n" ;
+    std::array<int ,5> arr = {9,4,5,2,1};
+
+    cout<<"helloo"<<arr.size()<<"\n" ;
     std::vector<int> myVector = {1,4,5,6,3,2,345,667,78};
-    
+    myVector.push_back(38);
+    myVector.insert(myVector.begin(),999);
     cout<<"vector: \n";
 
     vector<int>::iterator it = myVector.begin();
@@ -30,6 +34,8 @@ int main() {
     }
     std::vector<int>::iterator itend = myVector.end();
     std::cout<<"itend :"<<*itend;
+    myVector.clear();
+    std::cout<<"\n"<<myVector.empty();
     return 0;
 }
 
