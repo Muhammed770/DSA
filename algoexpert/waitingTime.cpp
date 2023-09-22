@@ -22,9 +22,6 @@ int minimumWaitingTime(vector<int> queries)
     }
 
     cout << "sum" << sum << endl;
-    // for(unsigned int i=0;i< queries.size();++i) {
-    //     for (unsigned int j = queries.size() -1; j >=0 ; ++j) {
-    //     }
-    // }
+    
     return sum;
 }
