@@ -1,11 +1,17 @@
-#include<iostream>
-#include<sstream>
-#include<vector>
+#include <iostream>
+#include <sstream>
+#include <vector>
 #include <unordered_set>
 
 bool hasRepeatingChars(const std::string& word) {
     std::unordered_set<char> characters;
-    
+    for(char c: word) {
+        if(characters.count(c) > 0) {
+            return true;
+        }
+        characters.insert(c);
+    }
+    return false;
 }
 
 int main() {
