@@ -18,12 +18,12 @@ std::vector<int> longestIncreasingSubString(const std::vector<int>& array) {
             }
         }
     }
-    std::cout << std::endl;
-    for (int n : lis)
-    {
-        std::cout << n;
-    }
-    std::cout << std::endl;
+    // std::cout << std::endl;
+    // for (int n : lis)
+    // {
+    //     std::cout << n;
+    // }
+    // std::cout << std::endl;
     int maxVal = *std::max_element(lis.begin(),lis.end());
     for(int i=n-1;i>=0;i--) {
         if(lis[i]==maxVal) {
@@ -42,15 +42,14 @@ int main() {
     std::istringstream iss(input);
     std::vector<int> numbers;
     int number;
-    while(iss >> number) {
-        numbers.push_back(number);
-        std::cout<<number;
-    }
+    // while(iss >> number) {
+    //     numbers.push_back(number);
+    //     std::cout<<number;
+    // }
 
     std::vector<int> result1 = longestIncreasingSubString(numbers);
     std::cout << "longestIncreasingSubString:"<<std::endl;
-        for (int n : result1)
-    {
+        for (int n : result1) {
         std::cout<<n<<" ";
     }
     std::cout<<std::endl;
