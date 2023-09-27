@@ -28,5 +28,7 @@ int main() {
     for(unsigned int i=0;i< sentence.size();++i) {
         std::cout<<sentence.at(i)<<" ";
     }
+
+    kjh3ke
     
 }
