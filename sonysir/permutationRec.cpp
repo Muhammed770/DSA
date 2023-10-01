@@ -7,7 +7,10 @@ void permutationHelper(vector<vector<int>> &ans,vector<int> array, vector<int> d
         return;
     }
     for(int i=0;i<array.size();++i) {
-        
+        if(!used[i]) {
+            used[i] =true;
+            
+        } 
     }
 }
 vector<vector<int>> getPermutations(vector<int> array)
