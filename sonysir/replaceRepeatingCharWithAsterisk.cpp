@@ -26,7 +26,7 @@ int main() {
         sentence.push_back(result);
     }
     for(unsigned int i=0;i< sentence.size();++i) {
-        std::cout<<sentence.at(i)<<"jkdfffnretk ";
+        std::cout<<sentence.at(i);
     }
 
     
