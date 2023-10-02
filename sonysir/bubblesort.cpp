@@ -11,8 +11,9 @@ vector<int> bubbleSort(vector<int> array)
             {
                 int temp = aray[j];
                 array[j] = array[j + 1];
+                array[j+1] = temp;
             }
         }
     }
-    return {};
+    return array;
 }
