@@ -18,24 +18,12 @@ LinkedList *middleNode(LinkedList *linkedList)
         count++;
         current = current->next;
     }
-    if(count%2 ==0) {
-        int n = (count/2)+1;
-        LinkedList *current = linkedList;
-        while (current != nullptr && n!=0)
-        {
-            current = current->next;
-            n--;
-        }
-        return current;
-    }else {
-        int n = (count / 2) + 1;
-        LinkedList *current = linkedList;
-        while (current != nullptr && n != 0)
-        {
-            current = current->next;
-            n--;
-        }
-        return current;
+    int n = (count / 2) + 1;
+    LinkedList *current = linkedList;
+    while (current != nullptr && n != 1)
+    {
+        current = current->next;
+        n--;
     }
-    return nullptr;
+    return current;
 }
