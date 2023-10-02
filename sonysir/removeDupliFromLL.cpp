@@ -22,6 +22,7 @@ LinkedList *removeDuplicatesFromLinkedList(LinkedList *linkedList)
             prev->next = current->next;
         }else {
             mySet.insert(current->value);
+            prev = current;
         }
         current = current->next;
     }
