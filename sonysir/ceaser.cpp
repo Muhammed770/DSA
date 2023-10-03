@@ -35,9 +35,11 @@ bool generateDocument(string characters, string document)
     for(char ch:document) {
         if(chars.find(ch) != chars.end()) {
             chars.erase(ch);
+        }else {
+            return false;
         }
     }
-    return false;
+    return true;
 }
 
 int main() {
