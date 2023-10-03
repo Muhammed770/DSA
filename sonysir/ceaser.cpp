@@ -1,4 +1,5 @@
 #include <iostream>
+#include <unordered_set>
 
 using namespace std;
 string ceaserCypher(string str,int key) {
@@ -28,6 +29,16 @@ string runLengthEncoding(string str)
     return result;
 }
 
+bool generateDocument(string characters, string document)
+{
+    unordered_multiset<char> chars(characters.begin(), characters.end());
+    for(char ch:document) {
+        if(chars.find(ch) != chars.end()) {
+            chars.erase(ch);
+        }
+    }
+    return false;
+}
 
 int main() {
     string str = "AAAAAAAAAAAAAaaaAAAAaaaBBBCCCDDDD";
