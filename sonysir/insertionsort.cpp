@@ -11,5 +11,6 @@ vector<int> insertionSort(vector<int> array)
             array[j-1] = temp;
         }
     }
-        return array;
+    
+    return array;
 }
