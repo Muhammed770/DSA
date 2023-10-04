@@ -65,7 +65,18 @@ int firstNonRepeatingCharacter(string string)
 int firstNonRepeatingCharacter(string string)
 {
     unordered_map<char,int> charCount;
+    for(char ch:string) {
+        charCount[ch]++;
+    }
+    for(int i=0;i<string.length();++i) {
+        if(charCount[string[i]]== 1) {
+            return i;
+        }
+    }
+    return -1;
 }
+
+
 
 int main() {
     string str = "AAAAAAAAAAAAAaaaAAAAaaaBBBCCCDDDD";
