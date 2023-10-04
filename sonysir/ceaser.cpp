@@ -34,7 +34,8 @@ bool generateDocument(string characters, string document)
     unordered_multiset<char> chars(characters.begin(), characters.end());
     for(char ch:document) {
         if(chars.find(ch) != chars.end()) {
-            chars.erase(ch);
+            // chars.erase(ch); //this rm all occurence
+            chars.erase(chars.equal_range(ch).first); //removes only a single occurrence
         }else {
             return false;
         }
