@@ -1,5 +1,6 @@
 #include <iostream>
 #include <unordered_set>
+#include <unordered_map>
 
 using namespace std;
 string ceaserCypher(string str,int key) {
@@ -41,6 +42,29 @@ bool generateDocument(string characters, string document)
         }
     }
     return true;
+}
+
+int firstNonRepeatingCharacter(string string)
+{
+    unordered_multiset<char> chars(string.begin(),string.end());
+    for(char ch:string) {
+        if(chars.count(ch) > 1) {
+            chars.erase(ch);
+        }
+    }
+    int index = 0;
+    for(char ch:string) {
+        index++;
+        if(chars.find(ch) != chars.end()) {
+            return index;
+        }
+    }
+    return -1;
+}
+
+int firstNonRepeatingCharacter(string string)
+{
+    unordered_map<char,int> charCount;
 }
 
 int main() {
