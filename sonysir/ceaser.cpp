@@ -77,6 +77,12 @@ int firstNonRepeatingCharacter(string string)
 }
 
 
+vector<vector<string>> semordnilap(vector<string> words)
+{
+    vector<vector<string>> result;
+    for()
+    return {};
+}
 
 int main() {
     string str = "AAAAAAAAAAAAAaaaAAAAaaaBBBCCCDDDD";
