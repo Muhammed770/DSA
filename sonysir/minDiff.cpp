@@ -48,3 +48,58 @@ vector<int> smallestDifference(vector<int> arrayOne, vector<int> arrayTwo)
     }
     return numPair;
 }
+
+#include <vector>
+#include <climits>
+using namespace std;
+
+vector<int> smallestDifference(vector<int> arrayOne, vector<int> arrayTwo)
+{
+    sort(arrayOne.begin(), arrayOne.end());
+    sort(arrayTwo.begin(), arrayTwo.end());
+    for (int number : arrayOne)
+    {
+        cout << number << " ";
+    }
+    cout << endl;
+    for (int number : arrayTwo)
+    {
+        cout << number << " ";
+    }
+    cout << endl;
+
+    int start1 = 0;
+    int start2 = 0;
+
+    int size1 = arrayOne.size();
+    int size2 = arrayTwo.size();
+    vector<int> result(2, 0);
+    int minDiff = INT_MAX;
+    int count = 0;
+    while (start1 < size1 && start2 < size2)
+    {
+        int currDiff = abs(arrayOne[start1] - arrayTwo[start2]);
+        if (currDiff < minDiff)
+        {
+            minDiff = currDiff;
+            result[0] = arrayOne[start1];
+            result[1] = arrayTwo[start2];
+        }
+        if (arrayOne[start1] < arrayTwo[start2])
+        {
+            start1++;
+        }
+        else
+        {
+            start2++;
+        }
+        count++;
+    }
+    for (int number : result)
+    {
+        cout << number << " ";
+    }
+    cout << endl;
+    cout << "count : " << count;
+    return result;
+}
