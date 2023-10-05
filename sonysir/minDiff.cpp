@@ -27,17 +27,23 @@ vector<int> smallestDifference(vector<int> arrayOne, vector<int> arrayTwo)
     }
     int smallest = INT_MAX;
     vector<int> numPair;
-    for (int i = 0; i < mergeVector.size(); ++i)
+    for (int i = 0; i < mergedVector.size(); ++i)
     {
         int absDiff = abs(mergedVector[i] - mergedVector[i + 1]);
         if (absDiff < smallest)
         {
-            if (binary_search(arrayOne.begin(), arrayOne.end(), mergedVector[i]) && binary_search(arrayTwo.begin(), arrayTwo.end(), mergedVector[i + 1]) ||
-                binary_search(arrayOne.begin(), arrayOne.end(), mergedVector[i + 1]) && binary_search(arrayTwo.begin(), arrayTwo.end(), mergedVector[i]))
+            if ((binary_search(arrayOne.begin(), arrayOne.end(), mergedVector[i]) && binary_search(arrayTwo.begin(), arrayTwo.end(), mergedVector[i + 1])) || (binary_search(arrayOne.begin(), arrayOne.end(), mergedVector[i + 1]) && binary_search(arrayTwo.begin(), arrayTwo.end(), mergedVector[i])))
+            {
+                if (binary_search(arrayOne.begin(), arrayOne.end(), mergedVector[i]))
                 {
-                    numPair={mergedVector[i],mergedVector[i+1]};
-                    smallest = absDiff;
+                    numPair = {mergedVector[i], mergedVector[i + 1]};
                 }
+                else
+                {
+                    numPair = {mergedVector[i + 1], mergedVector[i]};
+                }
+                smallest = absDiff;
+            }
         }
     }
     return numPair;
