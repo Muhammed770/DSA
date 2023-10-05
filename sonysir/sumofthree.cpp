@@ -13,7 +13,7 @@ vector<vector<int>> threeNumberSum(vector<int> array, int targetSum)
         while (lower < upper)
         {
             int currentSum = array[i]+array[lower]+array[upper];
-            if (targetSum - array[i] == array[lower] + array[upper])
+            if (targetSum = currentSum)
             {
                 vector<int> triplets = {array[i], array[lower], array[upper]};
                 sort(triplets.begin(), triplets.end());
@@ -21,11 +21,11 @@ vector<vector<int>> threeNumberSum(vector<int> array, int targetSum)
                 lower++;
                 upper--;
             }
-            else if (targetSum - array[i] < array[lower] + array[upper])
+            else if (targetSum < currentSum)
             {
                 upper--;
             }
-            else if (targetSum - array[i] > array[lower] + array[upper])
+            else if (targetSum > currentSum)
             {
                 lower++;
             }
