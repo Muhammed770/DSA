@@ -26,5 +26,5 @@ LinkedList *removeDuplicatesFromLinkedList(LinkedList *linkedList)
         }
         current = current->next;
     }
-    return linkedList;
+    return linkedList; //
 }
