@@ -41,7 +41,7 @@ bool isMonotonic(vector<int> array)
             }
         }
     }
-    //jbejkfk
+    //jbe
 
     return true;
 }
