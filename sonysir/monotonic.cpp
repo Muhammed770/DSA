@@ -41,7 +41,7 @@ bool isMonotonic(vector<int> array)
             }
         }
     }
-    //gduhudchi
+    //gduhudchiduhu
 
 
     return true;
