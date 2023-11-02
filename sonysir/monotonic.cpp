@@ -41,8 +41,8 @@ bool isMonotonic(vector<int> array)
             }
         }
     }
-    //
-    
+    //gjhg
+
 
     return true;
 }
